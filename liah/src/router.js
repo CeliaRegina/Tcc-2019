@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-
+import Amor from './views/Amor.vue'
+import Amizade from './views/Amizade.vue'
+import Indiretas from './views/Indiretas.vue'
+import Refletir from './views/Refletir.vue'
+import Motivacao from './views/Motivacao.vue'
+import Login from './views/Login.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -10,14 +15,42 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    },
+    }
+    ,
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/amor',
+      name: 'amor',
+      component: Amor
+    }
+    ,
+    {
+      path: '/amizade',
+      name: 'amizade',
+      component: Amizade
+    }
+    ,
+    {
+      path: '/indiretas',
+      name: 'indiretas',
+      component: Indiretas
+    }
+    ,
+    {
+      path: '/refletir',
+      name: 'refletir',
+      component: Refletir
+    }
+    ,
+    {
+      path: '/motivacao',
+      name: 'motivacao',
+      component: Motivacao
+    }
+    ,
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 })
